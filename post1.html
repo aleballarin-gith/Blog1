@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perché ho deciso di avere uno spazio mio su internet – Alessio Ballarin</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --purple: #0EA5E9;
+    --purple-light: #E0F4FD;
+    --purple-dark: #0369A1;
+    --coral: #F97316;
+    --amber: #EA580C;
+  }
+
+  body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: #fafafa;
+    color: #1a1a1a;
+    line-height: 1.7;
+  }
+
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(250,250,250,0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #eee;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 2rem; height: 56px;
+  }
+  .nav-logo {
+    font-weight: 700; font-size: 1.1rem;
+    background: linear-gradient(135deg, var(--purple), var(--coral));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    letter-spacing: -0.5px; text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 1.5rem; }
+  .nav-links a {
+    text-decoration: none; color: #555; font-size: 0.9rem;
+    padding: 4px 0; border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .nav-links a:hover { color: var(--purple); border-color: var(--purple); }
+
+  .container { max-width: 680px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+
+  .article-back {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-size: 0.9rem; font-weight: 600; color: var(--purple);
+    text-decoration: none; margin-bottom: 2.5rem;
+    transition: gap 0.2s;
+  }
+  .article-back:hover { gap: 0.75rem; }
+
+  .article-category {
+    display: inline-block;
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em;
+    text-transform: uppercase; padding: 2px 10px; border-radius: 999px;
+    background: var(--purple-light); color: var(--purple-dark);
+    margin-bottom: 1rem;
+  }
+
+  .article-title {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 800; letter-spacing: -1.5px; line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+
+  .article-meta { font-size: 0.85rem; color: #999; display: flex; gap: 1rem; margin-bottom: 1.5rem; }
+
+  .article-divider {
+    width: 48px; height: 4px; border-radius: 2px; margin-bottom: 2.5rem;
+    background: linear-gradient(90deg, var(--purple), var(--coral));
+  }
+
+  .article-body { font-size: 1.08rem; color: #2a2a2a; line-height: 1.85; }
+  .article-body p { margin-bottom: 1.5rem; }
+
+  .article-body .ps {
+    margin-top: 2.5rem; padding: 1.25rem 1.5rem;
+    background: var(--purple-light); border-radius: 12px;
+    font-size: 0.95rem; color: var(--purple-dark); line-height: 1.7;
+  }
+  .article-body .ps strong { font-weight: 700; }
+
+  footer {
+    text-align: center; padding: 2rem; border-top: 1px solid #eee;
+    font-size: 0.85rem; color: #999;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">AB</a>
+  <div class="nav-links">
+    <a href="index.html#about">Chi sono</a>
+    <a href="index.html#blog">Blog</a>
+    <a href="index.html#contact">Contatti</a>
+  </div>
+</nav>
+
+<div class="container">
+  <a href="index.html#blog" class="article-back">← Torna al blog</a>
+
+  <span class="article-category">Riflessioni</span>
+  <h1 class="article-title">Perché ho deciso di avere uno spazio mio su internet</h1>
+  <div class="article-meta">
+    <span>5 maggio 2026</span>
+    <span>3 min</span>
+  </div>
+  <div class="article-divider"></div>
+
+  <div class="article-body">
+    <p><strong>Da cosa nasce questo spazio?</strong></p>
+    <p>Nasce dall'esigenza di esprimermi e di urlare al mondo quello che penso, schivando però la cattiveria diffusa dei social networks. Nasce con la speranza di offrire un'occasione di riflessione a chi legge e ancora prima a me, non per provocare e nemmeno per offendere.</p>
+    <p>Nasce dalla voglia di sperimentare e di cimentarsi con la tecnologia, dalla voglia di fare qualcosa di diverso dal solito, dalla voglia di non fermarsi.</p>
+    <div class="ps"><strong>P.S.:</strong> Questo primo post fa eccezione, poi prometto di rilassarmi e di dare un tono più leggero e scherzoso a quello che scrivo. In ogni caso, come avrete capito, l'idea è scrivere post relativamente brevi: TikTok ha bruciato la soglia dell'attenzione a molti, me compreso.</div>
+  </div>
+</div>
+
+<footer>
+  &copy; 2026 Alessio Ballarin — fatto con cura
+</footer>
+
+</body>
+</html>
