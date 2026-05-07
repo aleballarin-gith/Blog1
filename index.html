@@ -8,19 +8,19 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --purple: #7F77DD;
-    --purple-light: #EEEDFE;
-    --purple-dark: #3C3489;
-    --teal: #1D9E75;
-    --teal-light: #E1F5EE;
-    --coral: #D85A30;
-    --coral-light: #FAECE7;
-    --pink: #D4537E;
-    --pink-light: #FBEAF0;
-    --amber: #EF9F27;
-    --amber-light: #FAEEDA;
-    --blue: #378ADD;
-    --blue-light: #E6F1FB;
+    --purple: #0EA5E9;
+    --purple-light: #E0F4FD;
+    --purple-dark: #0369A1;
+    --teal: #0284C7;
+    --teal-light: #DBEAFE;
+    --coral: #F97316;
+    --coral-light: #FEF0E7;
+    --pink: #FB923C;
+    --pink-light: #FEE4D0;
+    --amber: #EA580C;
+    --amber-light: #FDE8D8;
+    --blue: #38BDF8;
+    --blue-light: #E0F4FD;
   }
 
   body {
@@ -55,14 +55,13 @@
   }
   .nav-links a:hover { color: var(--purple); border-color: var(--purple); }
 
-  /* SECTIONS */
   section { padding: 5rem 2rem; max-width: 860px; margin: 0 auto; }
 
   /* HERO */
   #hero {
     min-height: 88vh;
     display: flex; flex-direction: column; justify-content: center;
-    padding-top: 3rem;
+    padding-top: 3rem; position: relative;
   }
   .hero-tag {
     display: inline-block;
@@ -73,19 +72,14 @@
   }
   .hero-name {
     font-size: clamp(2.8rem, 7vw, 5rem);
-    font-weight: 800; line-height: 1.05;
-    letter-spacing: -2px;
+    font-weight: 800; line-height: 1.05; letter-spacing: -2px;
   }
   .hero-name .highlight {
     background: linear-gradient(135deg, var(--purple) 0%, var(--coral) 50%, var(--amber) 100%);
     -webkit-background-clip: text; -webkit-text-fill-color: transparent;
   }
-  .hero-sub {
-    font-size: 1.2rem; color: #555; margin-top: 1.25rem; max-width: 520px;
-  }
-  .hero-cta {
-    display: flex; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap;
-  }
+  .hero-sub { font-size: 1.2rem; color: #555; margin-top: 1.25rem; max-width: 520px; }
+  .hero-cta { display: flex; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap; }
   .btn {
     padding: 0.65rem 1.5rem; border-radius: 999px;
     font-size: 0.95rem; font-weight: 600; cursor: pointer;
@@ -95,22 +89,19 @@
   .btn-primary {
     background: linear-gradient(135deg, var(--purple), var(--coral));
     color: #fff; border: none;
-    box-shadow: 0 4px 16px rgba(127,119,221,0.35);
+    box-shadow: 0 4px 16px rgba(14,165,233,0.35);
   }
-  .btn-primary:hover { box-shadow: 0 6px 24px rgba(127,119,221,0.5); }
+  .btn-primary:hover { box-shadow: 0 6px 24px rgba(14,165,233,0.5); }
   .btn-outline {
     background: transparent; color: var(--purple);
     border: 2px solid var(--purple);
   }
   .btn-outline:hover { background: var(--purple-light); }
 
-  /* DECORATIVE BLOBS */
   .blob-container {
     position: absolute; right: -60px; top: 60px;
-    width: 420px; height: 420px; opacity: 0.18; pointer-events: none;
-    z-index: -1;
+    width: 420px; height: 420px; opacity: 0.18; pointer-events: none; z-index: -1;
   }
-  #hero { position: relative; }
 
   /* SECTION HEADER */
   .section-label {
@@ -120,46 +111,28 @@
     padding: 3px 10px; border-radius: 999px;
   }
   .label-purple { background: var(--purple-light); color: var(--purple-dark); }
-  .label-teal { background: var(--teal-light); color: #085041; }
-  .label-coral { background: var(--coral-light); color: #4A1B0C; }
-  .section-title {
-    font-size: 2rem; font-weight: 800; letter-spacing: -1px; margin-bottom: 0.5rem;
-  }
-  .section-divider {
-    width: 48px; height: 4px; border-radius: 2px; margin: 1rem 0 2.5rem;
-  }
+  .label-teal { background: var(--teal-light); color: #1e3a5f; }
+  .label-coral { background: var(--coral-light); color: #7c2d12; }
+  .section-title { font-size: 2rem; font-weight: 800; letter-spacing: -1px; margin-bottom: 0.5rem; }
+  .section-divider { width: 48px; height: 4px; border-radius: 2px; margin: 1rem 0 2.5rem; }
   .div-purple { background: linear-gradient(90deg, var(--purple), var(--coral)); }
   .div-teal { background: linear-gradient(90deg, var(--teal), var(--blue)); }
   .div-coral { background: linear-gradient(90deg, var(--coral), var(--amber)); }
 
   /* ABOUT */
   #about { border-top: 1px solid #eee; }
-  .about-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;
-    margin-top: 1rem;
-  }
   .about-bio { font-size: 1.05rem; color: #333; }
-  .about-interests { display: flex; flex-direction: column; gap: 0.75rem; }
-  .interest-chip {
-    padding: 0.5rem 1rem; border-radius: 12px;
-    font-size: 0.9rem; font-weight: 500;
-  }
 
   /* BLOG */
   #blog { border-top: 1px solid #eee; }
   .blog-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
   .blog-card {
-    background: #fff;
-    border: 1px solid #e8e8e8;
-    border-radius: 16px;
-    padding: 1.5rem;
-    cursor: pointer;
+    background: #fff; border: 1px solid #e8e8e8; border-radius: 16px;
+    padding: 1.5rem; cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
     position: relative; overflow: hidden;
   }
-  .blog-card::before {
-    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
-  }
+  .blog-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; }
   .blog-card:nth-child(1)::before { background: linear-gradient(90deg, var(--purple), var(--pink)); }
   .blog-card:nth-child(2)::before { background: linear-gradient(90deg, var(--teal), var(--blue)); }
   .blog-card:nth-child(3)::before { background: linear-gradient(90deg, var(--coral), var(--amber)); }
@@ -171,9 +144,9 @@
     display: inline-block; padding: 2px 8px; border-radius: 999px;
   }
   .cat-riflessioni { background: var(--purple-light); color: var(--purple-dark); }
-  .cat-tech { background: var(--blue-light); color: #0C447C; }
-  .cat-societa { background: var(--teal-light); color: #085041; }
-  .cat-cultura { background: var(--amber-light); color: #412402; }
+  .cat-tech { background: var(--blue-light); color: #0369a1; }
+  .cat-societa { background: var(--teal-light); color: #1e3a5f; }
+  .cat-cultura { background: var(--amber-light); color: #7c2d12; }
   .blog-title { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.3; }
   .blog-excerpt { font-size: 0.88rem; color: #666; line-height: 1.6; margin-bottom: 1rem; }
   .blog-meta { font-size: 0.78rem; color: #999; display: flex; gap: 0.75rem; }
@@ -185,51 +158,23 @@
     padding: 2.5rem; max-width: 560px;
   }
   .contact-intro { color: #555; margin-bottom: 2rem; }
-  .form-group { margin-bottom: 1.25rem; }
-  .form-group label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.4rem; color: #333; }
-  .form-group input,
-  .form-group textarea {
-    width: 100%; padding: 0.65rem 0.9rem;
-    border: 1.5px solid #e0e0e0; border-radius: 10px;
-    font-size: 0.95rem; font-family: inherit;
-    background: #fafafa; color: #1a1a1a;
-    transition: border-color 0.2s, box-shadow 0.2s;
-    outline: none;
-  }
-  .form-group input:focus,
-  .form-group textarea:focus {
-    border-color: var(--purple);
-    box-shadow: 0 0 0 3px rgba(127,119,221,0.15);
-    background: #fff;
-  }
-  .form-group textarea { resize: vertical; min-height: 120px; }
-  .social-links { display: flex; gap: 0.75rem; margin-top: 2rem; flex-wrap: wrap; }
+  .social-links { display: flex; gap: 0.75rem; flex-wrap: wrap; }
   .social-chip {
     padding: 0.4rem 1rem; border-radius: 999px; font-size: 0.85rem; font-weight: 600;
     text-decoration: none; transition: transform 0.15s;
   }
   .social-chip:hover { transform: translateY(-2px); }
-  .sc-twitter { background: var(--blue-light); color: #0C447C; }
   .sc-linkedin { background: var(--purple-light); color: var(--purple-dark); }
-  .sc-email { background: var(--teal-light); color: #085041; }
 
-  /* FOOTER */
   footer {
     text-align: center; padding: 2rem; border-top: 1px solid #eee;
     font-size: 0.85rem; color: #999;
   }
 
-  /* TOAST */
-  .toast {
-    position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%) translateY(80px);
-    background: #1a1a1a; color: #fff; padding: 0.75rem 1.5rem; border-radius: 999px;
-    font-size: 0.9rem; transition: transform 0.3s; z-index: 999;
-  }
-  .toast.show { transform: translateX(-50%) translateY(0); }
-
   @media(max-width: 620px) {
-    .about-grid, .blog-grid { grid-template-columns: 1fr; }
+    .blog-grid { grid-template-columns: 1fr; }
     .blob-container { display: none; }
+    .about-grid { grid-template-columns: 1fr !important; }
   }
 </style>
 </head>
@@ -250,9 +195,9 @@
     <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" style="stop-color:#7F77DD"/>
-          <stop offset="50%" style="stop-color:#D85A30"/>
-          <stop offset="100%" style="stop-color:#EF9F27"/>
+          <stop offset="0%" style="stop-color:#0EA5E9"/>
+          <stop offset="50%" style="stop-color:#F97316"/>
+          <stop offset="100%" style="stop-color:#EA580C"/>
         </linearGradient>
       </defs>
       <path fill="url(#g1)" d="M320,280Q280,360,200,360Q120,360,60,280Q0,200,60,120Q120,40,200,40Q280,40,320,120Q360,200,320,280Z"/>
@@ -274,14 +219,14 @@
   <div class="section-label label-purple">Chi sono</div>
   <h2 class="section-title">La mia storia</h2>
   <div class="section-divider div-purple"></div>
-  <div class="about-grid" style="grid-template-columns: 340px 1fr; align-items: start;">
+  <div class="about-grid" style="display:grid; grid-template-columns: 300px 1fr; gap: 2rem; align-items: start;">
     <div style="border-radius: 20px; overflow: hidden; aspect-ratio: 3/4;">
       <img src="foto.jpeg" style="width:100%; height:100%; object-fit:cover; display:block;" alt="Alessio Ballarin in montagna"/>
     </div>
     <div class="about-bio">
-      <p>Ho 23 anni, abito vicino a Venezia e sto concludendo la magistrale in <strong>Management Engineering</strong>. In parallelo, mi sto affacciando alla "vita da adulto" come consulente in <strong>awm suite</strong>, cercando di capire come funziona davvero il mondo del lavoro prima di entrarci con tutte e due le scarpe.</p>
+      <p>Ho 23 anni, abito vicino a Venezia e sto concludendo la magistrale in <strong>Management Engineering</strong>. In parallelo, mi sto affacciando alla "vita da adulto" come consulente in <strong>AWM Suite</strong>, cercando di capire come funziona davvero il mondo del lavoro prima di entrarci con tutte e due le scarpe.</p>
       <br>
-      <p>Sono quel genere di persona che odia stare ferma: gioco a basket da quando ero bambino, amo la montagna, e in spiaggia preferisco una partita a palla al lettino sotto l'ombrellone. Mi sto "appassionando" alla finanza personale (grazie al podcast <em>The Bull</em>), amo il cinema e guardo la politica da osservatore curioso - coinvolto quanto basta per avere un'opinione, distaccato abbastanza da non perdere lucidità.</p>
+      <p>Sono quel genere di persona che odia stare ferma: gioco a basket da quando ero bambino, amo la montagna, e in spiaggia preferisco una partita a palla al lettino sotto l'ombrellone. Mi sto "appassionando" alla finanza personale (grazie al podcast <em>The Bull</em>), amo il cinema e guardo la politica da osservatore curioso — coinvolto quanto basta per avere un'opinione, distaccato abbastanza da non perdere lucidità.</p>
       <br>
       <p>Questo sito è il mio angolo di internet. Lo uso per raccontarmi e per condividere come vedo le cose.</p>
     </div>
@@ -338,8 +283,6 @@
   &copy; 2026 Alessio Ballarin — fatto con cura
 </footer>
 
-<div class="toast" id="toast">Messaggio inviato! Ti rispondo presto.</div>
-
 <script>
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
@@ -348,19 +291,6 @@
       if (el) el.scrollIntoView({ behavior: 'smooth' });
     });
   });
-
-  function sendMsg() {
-    const n = document.getElementById('name').value.trim();
-    const e = document.getElementById('email').value.trim();
-    const m = document.getElementById('msg').value.trim();
-    if (!n || !e || !m) { alert('Compila tutti i campi prima di inviare!'); return; }
-    const t = document.getElementById('toast');
-    t.classList.add('show');
-    setTimeout(() => t.classList.remove('show'), 3500);
-    document.getElementById('name').value = '';
-    document.getElementById('email').value = '';
-    document.getElementById('msg').value = '';
-  }
 </script>
 </body>
 </html>
