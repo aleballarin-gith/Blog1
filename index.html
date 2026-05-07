@@ -180,6 +180,7 @@
 </head>
 <body>
 
+<div id="main-view">
 <nav>
   <div class="nav-logo">AB</div>
   <div class="nav-links">
@@ -282,6 +283,40 @@
 <footer>
   &copy; 2026 Alessio Ballarin — fatto con cura
 </footer>
+</div>
+
+<!-- ARTICLE VIEW -->
+<div id="article-view">
+  <nav>
+    <div class="nav-logo">AB</div>
+    <div class="nav-links">
+      <a href="#" onclick="closeArticle(); return false;">Chi sono</a>
+      <a href="#" onclick="closeArticle(); return false;">Blog</a>
+      <a href="#" onclick="closeArticle(); return false;">Contatti</a>
+    </div>
+  </nav>
+  <section style="max-width:860px; margin:0 auto; padding:4rem 2rem;">
+    <span class="article-back" onclick="closeArticle()">← Torna al blog</span>
+    <div class="article-header">
+      <span class="blog-category cat-riflessioni">Riflessioni</span>
+      <h1 class="article-title">Perché ho deciso di avere uno spazio mio su internet</h1>
+      <div class="article-meta">
+        <span>5 maggio 2026</span>
+        <span>3 min</span>
+      </div>
+      <div class="article-divider"></div>
+    </div>
+    <div class="article-body">
+      <p><strong>Da cosa nasce questo spazio?</strong></p>
+      <p>Nasce dall'esigenza di esprimermi e di urlare al mondo quello che penso, schivando però la cattiveria diffusa dei social networks. Nasce con la speranza di offrire un'occasione di riflessione a chi legge e ancora prima a me, non per provocare e nemmeno per offendere.</p>
+      <p>Nasce dalla voglia di sperimentare e di cimentarsi con la tecnologia, dalla voglia di fare qualcosa di diverso dal solito, dalla voglia di non fermarsi.</p>
+      <div class="ps"><strong>P.S.:</strong> Questo primo post fa eccezione, poi prometto di rilassarmi e di dare un tono più leggero e scherzoso a quello che scrivo. In ogni caso, come avrete capito, l'idea è scrivere post relativamente brevi: TikTok ha bruciato la soglia dell'attenzione a molti, me compreso.</div>
+    </div>
+  </section>
+  <footer>
+    &copy; 2026 Alessio Ballarin — fatto con cura
+  </footer>
+</div>
 
 <script>
   document.querySelectorAll('a[href^="#"]').forEach(a => {
@@ -291,6 +326,18 @@
       if (el) el.scrollIntoView({ behavior: 'smooth' });
     });
   });
+
+  document.querySelector('.blog-card').addEventListener('click', () => {
+    document.getElementById('main-view').classList.add('hidden');
+    document.getElementById('article-view').classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  function closeArticle() {
+    document.getElementById('article-view').classList.remove('active');
+    document.getElementById('main-view').classList.remove('hidden');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 </script>
 </body>
 </html>
