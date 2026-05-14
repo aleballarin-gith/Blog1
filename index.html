@@ -31,15 +31,13 @@
     overflow-x: hidden;
   }
 
-  /* NAV */
   nav {
     position: sticky; top: 0; z-index: 100;
     background: rgba(250,250,250,0.92);
     backdrop-filter: blur(8px);
     border-bottom: 1px solid #eee;
     display: flex; align-items: center; justify-content: space-between;
-    padding: 0 2rem;
-    height: 56px;
+    padding: 0 2rem; height: 56px;
   }
   .nav-logo {
     font-weight: 700; font-size: 1.1rem;
@@ -57,7 +55,6 @@
 
   section { padding: 5rem 2rem; max-width: 860px; margin: 0 auto; }
 
-  /* HERO */
   #hero {
     min-height: 88vh;
     display: flex; flex-direction: column; justify-content: center;
@@ -103,7 +100,6 @@
     width: 420px; height: 420px; opacity: 0.18; pointer-events: none; z-index: -1;
   }
 
-  /* SECTION HEADER */
   .section-label {
     display: inline-block;
     font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em;
@@ -119,11 +115,9 @@
   .div-teal { background: linear-gradient(90deg, var(--teal), var(--blue)); }
   .div-coral { background: linear-gradient(90deg, var(--coral), var(--amber)); }
 
-  /* ABOUT */
   #about { border-top: 1px solid #eee; }
   .about-bio { font-size: 1.05rem; color: #333; }
 
-  /* BLOG */
   #blog { border-top: 1px solid #eee; }
   .blog-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
   .blog-card {
@@ -136,7 +130,6 @@
   .blog-card:nth-child(1)::before { background: linear-gradient(90deg, var(--purple), var(--pink)); }
   .blog-card:nth-child(2)::before { background: linear-gradient(90deg, var(--teal), var(--blue)); }
   .blog-card:nth-child(3)::before { background: linear-gradient(90deg, var(--coral), var(--amber)); }
-  .blog-card:nth-child(4)::before { background: linear-gradient(90deg, var(--pink), var(--coral)); }
   .blog-card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(0,0,0,0.1); border-color: #ccc; }
   .blog-category {
     font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em;
@@ -147,11 +140,12 @@
   .cat-tech { background: var(--blue-light); color: #0369a1; }
   .cat-societa { background: var(--teal-light); color: #1e3a5f; }
   .cat-cultura { background: var(--amber-light); color: #7c2d12; }
+  .cat-politica { background: var(--coral-light); color: #7c2d12; }
+  .cat-finanza { background: var(--teal-light); color: #1e3a5f; }
   .blog-title { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.3; }
   .blog-excerpt { font-size: 0.88rem; color: #666; line-height: 1.6; margin-bottom: 1rem; }
   .blog-meta { font-size: 0.78rem; color: #999; display: flex; gap: 0.75rem; }
 
-  /* CONTACT */
   #contact { border-top: 1px solid #eee; }
   .contact-box {
     background: #fff; border: 1px solid #e8e8e8; border-radius: 20px;
@@ -180,9 +174,7 @@
 </head>
 <body>
 
-<div id="main-view">
 <nav>
-  <div class="nav-logo">AB</div>
   <div class="nav-logo">AB</div>
   <div class="nav-links">
     <a href="#about">Chi sono</a>
@@ -242,20 +234,28 @@
   <div class="section-divider div-teal"></div>
   <div class="blog-grid">
     <a href="post1.html" style="text-decoration:none; color:inherit;">
-    <div class="blog-card">
-      <span class="blog-category cat-riflessioni">Riflessioni</span>
-      <div class="blog-title">Perché ho deciso di avere uno spazio mio su internet</div>
-      <div class="blog-excerpt">In un'epoca di social media e feed algoritmici, avere un posto tutto suo fa ancora la differenza.</div>
-      <div class="blog-meta"><span>5 maggio 2026</span><span>3 min</span></div>
-    </div>
+      <div class="blog-card">
+        <span class="blog-category cat-riflessioni">Riflessioni</span>
+        <div class="blog-title">Perché ho deciso di avere uno spazio mio su internet</div>
+        <div class="blog-excerpt">In un'epoca di social media e feed algoritmici, avere un posto tutto suo fa ancora la differenza.</div>
+        <div class="blog-meta"><span>5 maggio 2026</span><span>3 min</span></div>
+      </div>
     </a>
     <a href="post2.html" style="text-decoration:none; color:inherit;">
-    <div class="blog-card">
-      <span class="blog-category cat-societa">Politica</span>
-      <div class="blog-title">Boldrin vs Bonelli: chi ha sparato sulla Croce Rossa?</div>
-      <div class="blog-excerpt">Riflessioni dopo aver ascoltato la puntata di Pulp Podcast con Bonelli e Boldrin: energia nucleare, il peso del centro e aria fresca nel panorama politico italiano.</div>
-      <div class="blog-meta"><span>8 maggio 2026</span><span>4 min</span></div>
-    </div>
+      <div class="blog-card">
+        <span class="blog-category cat-politica">Politica</span>
+        <div class="blog-title">Boldrin vs Bonelli: chi ha sparato sulla Croce Rossa?</div>
+        <div class="blog-excerpt">Riflessioni dopo aver ascoltato la puntata di Pulp Podcast con Bonelli e Boldrin: energia nucleare, il peso del centro e aria fresca nel panorama politico italiano.</div>
+        <div class="blog-meta"><span>8 maggio 2026</span><span>4 min</span></div>
+      </div>
+    </a>
+    <a href="post3.html" style="text-decoration:none; color:inherit;">
+      <div class="blog-card">
+        <span class="blog-category cat-finanza">Finanza personale</span>
+        <div class="blog-title">Come ho iniziato a pensare ai miei soldi</div>
+        <div class="blog-excerpt">Fuffaguru, un'azione di Nvidia regalata al cugino e un podcast: come sono passato dall'ignoranza finanziaria all'investimento passivo.</div>
+        <div class="blog-meta"><span>14 maggio 2026</span><span>5 min</span></div>
+      </div>
     </a>
   </div>
 </section>
@@ -276,7 +276,6 @@
 <footer>
   &copy; 2026 Alessio Ballarin — fatto con cura
 </footer>
-</div>
 
 <script>
   document.querySelectorAll('a[href^="#"]').forEach(a => {
